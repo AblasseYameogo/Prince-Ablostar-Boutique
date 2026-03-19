@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Ablostar | Développeur & Agence Digitale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Prince <span>Ablostar</span></div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Rechercher un modèle...">
+        </div>
+        <div class="nav-links">
+            <a href="#bio">À Propos</a>
+            <a href="#portfolio">Projets</a>
+            <a href="#boutique">Boutique</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            <button class="cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-bag"></i> <span id="cart-counter" class="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="crown-icon"><i class="fas fa-code"></i></div>
+        <h1>Développement & Business Digital</h1>
+        <p>L'excellence technologique depuis Ouagadougou. Solutions logicielles, Marketing Digital et E-commerce Premium.</p>
+        <a href="#boutique" class="btn-header">Voir la boutique</a>
+    </header>
+
+    <main class="container">
+        
+        <div class="bio-section reveal" id="bio">
+            <h2>Prince Ablostar</h2>
+            <h3>Ingénieur Logiciel & CEO | UJKZ</h3>
+            <p>Étudiant en Informatique et entrepreneur, je conçois des applications robustes (Python, C, Web) et je dirige une agence offrant des services numériques et du matériel informatique de pointe.</p>
+            <div class="tags">
+                <span class="tag"><i class="fab fa-python"></i> Python / C</span>
+                <span class="tag"><i class="fas fa-laptop-code"></i> Dev Web</span>
+                <span class="tag"><i class="fas fa-paint-brush"></i> Design UI/UX</span>
+                <span class="tag"><i class="fab fa-bitcoin"></i> Crypto Business</span>
+            </div>
+        </div>
+
+        <div class="section-title reveal" id="portfolio">
+            <h2 style="color: var(--tech-blue);">Portfolio Projets Code</h2>
+        </div>
+        <div class="grid reveal">
+            <div class="card projet-code">
+                <div class="card-content">
+                    <h3><i class="fas fa-calculator"></i> App Thermodynamique</h3>
+                    <p>Application Python pour le calcul de cinétique chimique et la résolution d'équations complexes.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">Mathématiques</span></div>
+                </div>
+            </div>
+            <div class="card projet-code">
+                <div class="card-content">
+                    <h3><i class="fas fa-users"></i> Gestion Étudiants UJKZ</h3>
+                    <p>Système de gestion de base de données pour le suivi académique (CRUD complet).</p>
+                    <div class="tags"><span class="tag">Web</span><span class="tag">Base de données</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="boutique">
+            
+            <div class="section-title reveal">
+                <h2 style="color: var(--design-purple);">Agence & Design Graphique</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="logo.jpg" alt="Logo" class="card-img" onerror="this.src='https://via.placeholder.com/200/f3e8ff/6c5ce7?text=Création+Logo'"></div>
+                    <div class="card-content">
+                        <h3>Création de Logo</h3>
+                        <p>Conception de logos professionnels.</p>
+                        <button class="btn btn-design add-to-cart" data-name="Création de Logo"><i class="fas fa-paint-brush"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="flyer.jpg" alt="Flyer" class="card-img" onerror="this.src='https://via.placeholder.com/200/f3e8ff/6c5ce7?text=Flyers'"></div>
+                    <div class="card-content">
+                        <h3>Flyers & Affiches</h3>
+                        <p>Affiches publicitaires impactantes.</p>
+                        <button class="btn btn-design add-to-cart" data-name="Design Flyer"><i class="fas fa-file-image"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="carte.jpg" alt="Carte Visite" class="card-img" onerror="this.src='https://via.placeholder.com/200/f3e8ff/6c5ce7?text=Carte+de+Visite'"></div>
+                    <div class="card-content">
+                        <h3>Cartes de Visite</h3>
+                        <p>Design épuré et professionnel.</p>
+                        <button class="btn btn-design add-to-cart" data-name="Carte de Visite"><i class="fas fa-id-badge"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><i class="fas fa-laptop-code" style="font-size: 5rem; color: var(--design-purple);"></i></div>
+                    <div class="card-content">
+                        <h3>Développement Web</h3>
+                        <p>Création de sites web sur-mesure.</p>
+                        <button class="btn btn-design add-to-cart" data-name="Service Dev Web"><i class="fas fa-code"></i> Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2 style="color: var(--apple-dark);">Gamme Apple iPhone</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="badge" style="background:var(--apple-dark);">Nouveau</div>
+                    <div class="card-img-wrapper"><img src="ip17.jpg" alt="iPhone 17" class="card-img" onerror="this.src='https://via.placeholder.com/200/f5f5f7/1d1d1f?text=iPhone+17'"></div>
+                    <div class="card-content">
+                        <h3>iPhone 17 (Pro / Max)</h3><p>Le futur d'Apple.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-apple add-to-cart" data-name="iPhone 17"><i class="fab fa-apple"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="ip16.jpg" alt="iPhone 16" class="card-img" onerror="this.src='https://via.placeholder.com/200/f5f5f7/1d1d1f?text=iPhone+16'"></div>
+                    <div class="card-content">
+                        <h3>iPhone 16</h3><p>Puce A18, appareil photo révolutionnaire.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-apple add-to-cart" data-name="iPhone 16"><i class="fab fa-apple"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="ip15.jpg" alt="iPhone 15" class="card-img" onerror="this.src='https://via.placeholder.com/200/f5f5f7/1d1d1f?text=iPhone+15'"></div>
+                    <div class="card-content">
+                        <h3>iPhone 15</h3><p>Dynamic Island et USB-C.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-apple add-to-cart" data-name="iPhone 15"><i class="fab fa-apple"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="ip14.jpg" alt="iPhone 14" class="card-img" onerror="this.src='https://via.placeholder.com/200/f5f5f7/1d1d1f?text=iPhone+14'"></div>
+                    <div class="card-content">
+                        <h3>iPhone 14</h3><p>Excellente autonomie.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-apple add-to-cart" data-name="iPhone 14"><i class="fab fa-apple"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="ip13.jpg" alt="iPhone 13" class="card-img" onerror="this.src='https://via.placeholder.com/200/f5f5f7/1d1d1f?text=iPhone+13'"></div>
+                    <div class="card-content">
+                        <h3>iPhone 13</h3><p>L'excellence Apple au meilleur prix.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-apple add-to-cart" data-name="iPhone 13"><i class="fab fa-apple"></i> Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2>Gamme Samsung Galaxy</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="badge" style="background:#0a192f;">Premium</div>
+                    <div class="card-img-wrapper"><img src="zfold7.jpg" alt="Z Fold 7" class="card-img" onerror="this.src='https://via.placeholder.com/200/eef2ff/4361ee?text=Z+Fold+7'"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy Z Fold 7</h3><p>L'écran pliable ultime.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-samsung add-to-cart" data-name="Galaxy Z Fold 7"><i class="fas fa-plus"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="badge">Nouveau</div>
+                    <div class="card-img-wrapper"><img src="a17.jpg" alt="Galaxy A17" class="card-img" onerror="this.src='https://via.placeholder.com/200/eef2ff/4361ee?text=Galaxy+A17'"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy A17</h3><p>Nouveau design fluide.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-samsung add-to-cart" data-name="Galaxy A17"><i class="fas fa-plus"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="a16.jpg" alt="Galaxy A16" class="card-img" onerror="this.src='https://via.placeholder.com/200/eef2ff/4361ee?text=Galaxy+A16'"></div>
+                    <div class="card-content">
+                        <h3>Samsung Galaxy A16</h3><p>Le meilleur rapport qualité/prix.</p><div class="price">Sur commande</div>
+                        <button class="btn btn-samsung add-to-cart" data-name="Galaxy A16"><i class="fas fa-plus"></i> Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2 style="color: #ea4335;">Google Pixel</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="badge" style="background:#ea4335;">IA Google</div>
+                    <div class="card-img-wrapper"><img src="pixel10.jpg" alt="Pixel 10" class="card-img" onerror="this.src='https://via.placeholder.com/200/ffeaa7/d63031?text=Pixel+10'"></div>
+                    <div class="card-content"><h3>Google Pixel 10 (Pro)</h3><p>Le summum de l'IA.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Google Pixel 10"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="pixel9.jpg" alt="Pixel 9" class="card-img" onerror="this.src='https://via.placeholder.com/200/ffeaa7/d63031?text=Pixel+9'"></div>
+                    <div class="card-content"><h3>Google Pixel 9</h3><p>Photographie pro.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Google Pixel 9"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="pixel8.jpg" alt="Pixel 8" class="card-img" onerror="this.src='https://via.placeholder.com/200/ffeaa7/d63031?text=Pixel+8'"></div>
+                    <div class="card-content"><h3>Google Pixel 8</h3><p>Puce Tensor G3.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Google Pixel 8"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="pixel7.jpg" alt="Pixel 7" class="card-img" onerror="this.src='https://via.placeholder.com/200/ffeaa7/d63031?text=Pixel+7'"></div>
+                    <div class="card-content"><h3>Google Pixel 7</h3><p>Fluidité parfaite.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Google Pixel 7"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="pixel6.jpg" alt="Pixel 6" class="card-img" onerror="this.src='https://via.placeholder.com/200/ffeaa7/d63031?text=Pixel+6'"></div>
+                    <div class="card-content"><h3>Google Pixel 6 (Pro)</h3><p>La référence photo.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Google Pixel 6"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2 style="color: #00b894;">Infinix</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="badge" style="background:#00b894;">Nouveau</div>
+                    <div class="card-img-wrapper"><img src="hot60.jpg" alt="Infinix Hot 60" class="card-img" onerror="this.src='https://via.placeholder.com/200/eafaf1/27ae60?text=Hot+60'"></div>
+                    <div class="card-content"><h3>Infinix Hot 60</h3><p>Batterie extrême.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Infinix Hot 60"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="hot50.jpg" alt="Infinix Hot 50" class="card-img" onerror="this.src='https://via.placeholder.com/200/eafaf1/27ae60?text=Hot+50'"></div>
+                    <div class="card-content"><h3>Infinix Hot 50</h3><p>Parfait pour le gaming.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Infinix Hot 50"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="hot40.jpg" alt="Infinix Hot 40" class="card-img" onerror="this.src='https://via.placeholder.com/200/eafaf1/27ae60?text=Hot+40'"></div>
+                    <div class="card-content"><h3>Infinix Hot 40</h3><p>Excellent rapport qualité/prix.</p><div class="price">Sur commande</div><button class="btn btn-samsung add-to-cart" data-name="Infinix Hot 40"><i class="fas fa-plus"></i> Ajouter</button></div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2 style="color: var(--tech-blue);">PC & Ordinateurs Portables</h2>
+            </div>
+            <div class="grid reveal">
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="hp.jpg" alt="HP" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=PC+HP'"></div>
+                    <div class="card-content"><h3>Ordinateur Portable HP</h3><p>Robustesse pour le travail.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Portable HP"><i class="fas fa-laptop"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="dell.jpg" alt="Dell" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=PC+Dell'"></div>
+                    <div class="card-content"><h3>Ordinateur Portable Dell</h3><p>Performances professionnelles.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Portable Dell"><i class="fas fa-laptop"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="badge" style="background:#ff7675;">Gaming</div>
+                    <div class="card-img-wrapper"><img src="pcgamer.jpg" alt="PC Gamer" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=PC+Gamer'"></div>
+                    <div class="card-content"><h3>PC Gamer Performances</h3><p>Cartes graphiques dédiées.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Gamer"><i class="fas fa-gamepad"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="lenovo.jpg" alt="Lenovo" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=Lenovo'"></div>
+                    <div class="card-content"><h3>Ordinateur Lenovo</h3><p>Clavier ultra-confortable.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Lenovo"><i class="fas fa-laptop"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card">
+                    <div class="card-img-wrapper"><img src="asus.jpg" alt="Asus" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=Asus'"></div>
+                    <div class="card-content"><h3>Ordinateur Asus</h3><p>Design fin et composants de pointe.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Asus"><i class="fas fa-laptop"></i> Ajouter</button></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section-title reveal" id="contact">
+            <h2>Me Contacter</h2>
+            <p>Pour un projet de développement ou une commande</p>
+        </div>
+        <div class="contact-section reveal">
+            <form action="https://formspree.io/f/TON_CODE_ICI" method="POST" class="contact-form">
+                <input type="text" name="nom" placeholder="Votre nom complet" required>
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+                <textarea name="message" rows="5" placeholder="Parlez-moi de votre projet ou commande..." required></textarea>
+                <button type="submit" class="btn btn-tech">Envoyer le message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p><strong>Prince Ablostar | Ingénieur Logiciel & CEO</strong></p>
+        <p><i class="fas fa-map-marker-alt"></i> Ouagadougou, Burkina Faso</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Code & Design par Prince Ablostar.</p>
+    </footer>
+
+    <div class="modal-overlay" id="overlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="modal-header">
+            <h3><i class="fas fa-shopping-bag"></i> Votre Panier</h3>
+            <button class="close-btn" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsList"></div>
+        <button class="checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</button>
+    </div>
+
+    <div class="toast" id="toastMsg">✅ Produit ajouté !</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
