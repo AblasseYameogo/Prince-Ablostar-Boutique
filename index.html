@@ -331,15 +331,77 @@
         <button class="checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</button>
     </div>
     <div class="toast" id="toastMsg">Produit ajouté !</div>
+<script>
+    // 1. Initialisation des variables
+    let panier = [];
+    const numeroWhatsApp = "22676604963";
+    const compteurAffiche = document.getElementById('compteur-panier');
+    const panierFlottant = document.getElementById('panier-zone');
 
-    <script>
-        let totalArticles = 0;
-        function ajouterAuPanier(nomProduit) {
-            totalArticles = totalArticles + 1;
-            document.getElementById('compteur-panier').innerText = totalArticles;
-            alert("Super ! " + nomProduit + " a été ajouté à votre panier 🛒");
+    // 2. Fonction pour mettre à jour l'affichage du compteur
+    function rafraichirCompteur() {
+        compteurAffiche.innerText = panier.length;
+        // Petite animation de rebond sur le panier
+        panierFlottant.style.transform = "scale(1.1)";
+        setTimeout(() => panierFlottant.style.transform = "scale(1)", 200);
+    }
+
+    // 3. ECOUTEUR AUTOMATIQUE : Il cherche tous les boutons d'ajout
+    document.addEventListener('click', function(e) {
+        // On vérifie si l'élément cliqué est un bouton de classe "add-to-cart" ou "btn-buy"
+        if (e.target.classList.contains('add-to-cart') || e.target.classList.contains('btn-buy')) {
+            
+            // On récupère le nom du produit (souvent dans le <h3> de la carte)
+            // On cherche le titre le plus proche du bouton cliqué
+            let carteProduit = e.target.closest('.card-content');
+            let nomProduit = carteProduit.querySelector('h3').innerText;
+
+            // Ajout au tableau
+            panier.push(nomProduit);
+            rafraichirCompteur();
+
+            // Notification visuelle (Toast)
+            let toast = document.getElementById("toastMsg");
+            toast.innerText = "✅ " + nomProduit + " ajouté !";
+            toast.style.display = "block";
+            toast.style.opacity = "1";
+            
+            setTimeout(() => {
+                toast.style.opacity = "0";
+                setTimeout(() => toast.style.display = "none", 500);
+            }, 2000);
         }
-    </script>
+    });
+
+    // 4. FONCTION DE COMMANDE (L'intelligence du panier)
+    function commanderSurWhatsApp() {
+        if (panier.length === 0) {
+            alert("Votre panier est vide ! Choisissez des articles d'abord.");
+            return;
+        }
+
+        // Création du message
+        let entete = "Salut Prince Ablostar ! 👋\nJe souhaite commander :\n\n";
+        let listeArticles = "";
+        
+        // On boucle sur le panier pour lister les choix
+        panier.forEach((item, index) => {
+            listeArticles += `• ${item}\n`;
+        });
+
+        let piedDePage = "\nPeux-tu me donner les prix et la disponibilité ?";
+        let messageFinal = entete + listeArticles + piedDePage;
+
+        // Encodage pour URL et redirection
+        let urlwa = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(messageFinal)}`;
+        window.open(urlwa, '_blank');
+    }
+
+    // On lie le clic sur la zone panier à la commande
+    panierFlottant.addEventListener('click', commanderSurWhatsApp);
+</script>
+
+
     <script src="script.js"></script>
 </body>
 </html>
