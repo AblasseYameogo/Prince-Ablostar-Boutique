@@ -282,6 +282,11 @@
                     <div class="card-content"><h3>Ordinateur Lenovo</h3><p>Clavier ultra-confortable.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Lenovo"><i class="fas fa-laptop"></i> Ajouter</button></div>
                 </div>
                 <div class="card produit-card product-card">
+                    <div class="card-img-wrapper"><img src="asus.jpg" alt="Asus" class="card produit-card product-card">
+                    <div class="card-img-wrapper"><img src="lenovo.jpg" alt="Lenovo" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=Lenovo'"></div>
+                    <div class="card-content"><h3>Ordinateur Lenovo</h3><p>Clavier ultra-confortable.</p><div class="price">Sur commande</div><button class="btn btn-tech add-to-cart" data-name="PC Lenovo"><i class="fas fa-laptop"></i> Ajouter</button></div>
+                </div>
+                <div class="card produit-card product-card">
                     <div class="card-img-wrapper"><img src="asus.jpg" alt="Asus" class="card-img" onerror="this.src='https://via.placeholder.com/200/e3f2fd/0984e3?text=Asus'"></div>
                     <div class="card-content">
                         <h3>Ordinateur Asus</h3>
@@ -402,6 +407,13 @@
 </script>
 
 
-    <script src="script.js"></script>
+    <script>
+  // Ce code force l'affichage de tous les éléments cachés
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.style.opacity = "1";
+    el.style.transform = "none";
+  });
+</script>
+
 </body>
 </html>
