@@ -49,7 +49,7 @@ header h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 15px; background
 .btn-header:hover { transform: scale(1.05); }
 
 /* Animation Scroll Reveal (Effet PRO) */
-.reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+.reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
 /* Reste du design adapté au mode sombre */
