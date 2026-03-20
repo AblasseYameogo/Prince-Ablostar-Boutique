@@ -132,26 +132,3 @@ function afficherToast(msg) {
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 3000);
 }
-// --- ANIMATION SCROLL REVEAL ---
-// Ce code détecte quand un élément ".reveal" entre dans l'écran et le rend visible
-document.addEventListener('DOMContentLoaded', function() {
-    const reveals = document.querySelectorAll('.reveal');
-
-    const revealOptions = {
-        threshold: 0.15, // L'élément apparait quand 15% de sa surface est visible
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Arrête d'observer une fois affiché
-            }
-        });
-    }, revealOptions);
-
-    reveals.forEach(reveal => {
-        revealOnScroll.observe(reveal);
-    });
-});
